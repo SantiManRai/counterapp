@@ -1,0 +1,180 @@
+
+//Counter App
+
+1. Delete all code from App.js and App.css
+
+2. Add the code on App.js:
+
+import React from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    return(
+      
+    <h1>0</h1>
+    );
+    }
+
+export default App;
+
+3. Add the code on App.css:
+
+.button
+{
+  background-color: blue;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  margin: 8px;
+  border-radius: 6px;
+}
+
+4. Create three buttons increasement, decreasement and Reset:
+
+import React from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    return(
+
+      <div>
+         <h1>0</h1>
+         <button>ADD</button>
+         <button>SUB</button>
+         <button>RESET</button>
+      </div>
+   
+    );
+    }
+
+export default App;
+
+6. Make a style using css and classname for button:
+
+import React from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    return(
+
+      <div>
+              <h1>0</h1>
+         <button className='button'>ADD</button>
+         <button className='button'>SUB</button>
+         <button className='button'>RESET</button>
+      </div>
+   
+    );
+    }
+
+export default App;
+
+7. Place all in center using App.css for div:
+
+.button
+{
+  background-color: blue;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  margin: 8px;
+  border-radius: 6px;
+}
+
+div
+{
+  text-align: center;
+  background-color: black;
+  color:white;
+}
+
+9. Initailze the number for passing on App.js:
+
+import React, {useState} from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    //Initializing number as 0 for passing.
+    const [number, setNumber] = useState(0);
+    return(
+
+      <div>
+              <h1>0</h1>
+         <button className='button'>ADD</button>
+         <button className='button'>SUB</button>
+         <button className='button'>RESET</button>
+      </div>
+   
+    );
+    }
+
+export default App;
+
+10. Pass the number h1 using useState:
+
+import React, {useState} from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    //Initializing number as 0 for passing.
+    const [number, setNumber] = useState(0);
+    return(
+
+      <div>
+              <h1>{number}</h1>
+         <button className='button'>ADD</button>
+         <button className='button'>SUB</button>
+         <button className='button'>RESET</button>
+      </div>
+   
+    );
+    }
+
+export default App;
+
+
+11. Apply the all button using onClick on App.js by passing number:
+
+import React, {useState} from 'react';
+import './App.css';
+
+const App=()=> 
+    {
+    //Initializing number as 0 for passing.
+    const [number, setNumber] = useState(0);
+    return(
+
+      <div>
+                        <h1>{number}</h1>
+                        
+         <button onClick={()=>setNumber(number + 1) } className='button'>ADD</button>
+         <button onClick={()=>setNumber(number - 1) } className='button'>SUB</button>
+         <button onClick={()=>setNumber(number - number) } className='button'>RESET</button>
+                        <br></br> <br></br>
+         <button onClick={()=>setNumber(number * number) } className='button'>SQU</button>
+         <button onClick={()=>setNumber(number * number * number) } className='button'>CUB</button>
+         <button onClick={()=>setNumber(number / number) } className='button'>DIV</button>
+
+      </div>
+   
+    );
+    }
+
+export default App;
+
+
+
+
+
+
+
+
